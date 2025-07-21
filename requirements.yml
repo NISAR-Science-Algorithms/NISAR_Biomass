@@ -1,4 +1,4 @@
-name: NISAR_L3_Biomass
+name: NISAR_Biomass
 channels:
   - conda-forge
 dependencies:
