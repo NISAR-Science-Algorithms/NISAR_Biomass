@@ -1,4 +1,4 @@
-name: NISAR_L3_CropArea
+name: NISAR_L3_Biomass
 channels:
   - conda-forge
 dependencies:
