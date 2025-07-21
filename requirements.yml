@@ -1,0 +1,25 @@
+name: NISAR_L3_CropArea
+channels:
+  - conda-forge
+dependencies:
+  - numpy
+  - matplotlib
+  - gdal
+  - scipy
+  - pandas
+  - scikit-learn
+  - ipywidgets
+  - rasterio
+  - h5py
+  - earthaccess
+  - pyproj
+  - geopandas
+  - asf_search 
+  - fpdf
+  - tqdm
+  - boto3
+  - jupyter
+  - ipykernel
+  - notebook
+  - nb_conda_kernels  
+  - pre-commit  
