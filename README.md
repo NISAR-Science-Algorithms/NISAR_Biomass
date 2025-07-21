@@ -6,7 +6,7 @@ Repository for L3 science products for the Ecosystems Biomass workflow
 
 
 
-### Installation and Setup:
+## Installation and Setup:
 1) Fork the repository
 
 2) Clone your fork to your local machine with an SSH key
@@ -25,7 +25,10 @@ Repository for L3 science products for the Ecosystems Biomass workflow
    ```
    jupyter notebook
    ```
-test
+
+## Information about the Notebook
+
+
 
    
 ### For Developers Submitting Code
