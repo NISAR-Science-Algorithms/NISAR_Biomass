@@ -1,7 +1,7 @@
 # NISAR_Biomass
 
 
-Repository for L3 science products for the Ecosystems Biomass workflow
+Repository for L3 science products for the Ecosystems Biomass workflow for public repo
 
 
 
