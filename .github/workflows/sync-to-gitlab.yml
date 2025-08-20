@@ -1,29 +1,30 @@
 name: Sync to GitLab
 
 on:
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - main
 
 jobs:
   sync:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Set up SSH
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.GITLAB_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
-
-      - name: Push to GitLab
-        run: |
-          git remote add gitlab git@gitlab.com:nisar-science-algorithms/ecosystems/biomass/productgeneration.git
-          git push gitlab main
+          - name: Checkout repository
+            uses: actions/checkout@v4
+            with:
+              fetch-depth: 0
+    
+          - name: Set up SSH
+            # This 'env' block makes the secret available as an environment variable
+            env:
+              GITLAB_SSH_KEY: ${{ secrets.GITLAB_DEPLOY_KEY_BIOM }}
+            run: |
+              mkdir -p ~/.ssh
+              echo "$GITLAB_SSH_KEY" > ~/.ssh/id_rsa
+              chmod 600 ~/.ssh/id_rsa
+              ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
+    
+          - name: Push to GitLab
+            run: |
+              git remote add gitlab git@gitlab.com:nisar-science-algorithms/ecosystems/biomass/productgeneration.git
+              git push gitlab main
