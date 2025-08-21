@@ -6,13 +6,13 @@ Repository for L3 science products for the Ecosystems Biomass workflow for publi
 
 
 
-## Installation and Setup:
+### Installation and Setup:
 1) Fork the repository
 
 2) Clone your fork to your local machine with an SSH key
    ```
 
-   git clone git@github.com:{your_github_username}/NISAR_Biomass.git
+   git clone git@github.com:{your_github_username}/NISAR_Biomassgit
 
    ```
 3) Install the required Python packages
@@ -25,28 +25,7 @@ Repository for L3 science products for the Ecosystems Biomass workflow for publi
    ```
    jupyter notebook
    ```
-
-## Information about the Notebook
-
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-```
-
+test
 
    
 ### For Developers Submitting Code
