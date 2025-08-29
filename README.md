@@ -12,7 +12,7 @@ Repository for L3 science products for the Ecosystems Biomass workflow for publi
 2) Clone your fork to your local machine with an SSH key
    ```
 
-   git clone git@github.com:{your_github_username}/NISAR_Biomassgit
+   git clone git@github.com:{your_github_username}/NISAR_Biomass.git
 
    ```
 3) Install the required Python packages
