@@ -26,6 +26,7 @@ import concurrent.futures
 from scipy.optimize import differential_evolution, minimize, shgo, dual_annealing
 import seaborn as sns
 from scipy.ndimage import generic_filter
+from datetime import datetime, UTC
 
 def calculate_density(x, y):
     # Calculate the point density
@@ -315,7 +316,7 @@ def density_scatter_plot(
 def initial_agb_estimation(OUT_DIR, SCENE_MASK_FILE_100,  SAR_RES_DATA_LIST, FILE_NAME, TRAIN_FILE = None, OUT_AGB_FILE = None, A_MAX=300):
     
     
-     
+    os.chdir(OUT_DIR)
      
     # CREATE OUTPUT NAME 
     OUT_PREFIX = OUT_DIR / FILE_NAME
